@@ -26,11 +26,11 @@ const deleteStudent=deleteFactory(StudentModel)
 app.post("/student",createStudent)
 app.get("/students",getStudents)
 app.get("/student/:id",getStudent)
-
 app.delete("/student/:id",deleteStudent);
 //----INITIAL CONNECTION-----
 
-const initialConnection=async()=>{
+
+const initialConnection= async()=>{
     try{
         const URL=`mongodb+srv://Narendra:kumar@cluster0.agwbq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
        await mongoose.connect(URL).then(()=>{
